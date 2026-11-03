@@ -91,7 +91,7 @@ image bd =
   let (bw, bh) = bitmapSize bd
       x0 = negate bw `div` 2
       y0 = negate bh `div` 2
-  in case recallBitmap bw bh of
+  in case recallBitmap bd of
        Just raw -> printf "<g transform=\"scale(1,-1)\"><image x=\"%d\" y=\"%d\" width=\"%d\" height=\"%d\" style=\"image-rendering:pixelated\" href=\"data:image/png;base64,%s\"/></g>" x0 y0 bw bh (BC.unpack (base64 (png bw bh raw)))
        Nothing -> printf "<rect x=\"%d\" y=\"%d\" width=\"%d\" height=\"%d\" fill=\"gray\"/>" x0 y0 bw bh
 

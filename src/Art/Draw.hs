@@ -225,7 +225,7 @@ fbm2 n x y =
 --   60 fps を保つには w × h を 8 万画素くらいまでにする。
 pixelImage :: Int -> Int -> Float -> (Int -> Int -> (Word8, Word8, Word8)) -> Picture
 pixelImage w h k f =
-  let bs = rememberBitmap w h $ BI.unsafeCreate (w * h * 4) $ \ptr ->
+  let bs = BI.unsafeCreate (w * h * 4) $ \ptr ->
         let goY !y | y >= h = pure ()
                    | otherwise = goX y 0 >> goY (y + 1)
             goX !y !x
@@ -239,7 +239,8 @@ pixelImage w h k f =
                   pokeByteOff ptr (o + 3) (255 :: Word8)
                   goX y (x + 1)
         in goY 0
-  in bs `seq` Scale k k (bitmapOfByteString w h (BitmapFormat TopToBottom PxRGBA) bs False)
+      fmt = BitmapFormat TopToBottom PxRGBA
+  in bs `seq` Scale k k (Bitmap (rememberBitmap (bitmapDataOfByteString w h fmt bs False) bs))
 
 -- | 0〜1 の小数で色を返す版
 pixelImageF :: Int -> Int -> Float -> (Int -> Int -> (Float, Float, Float)) -> Picture
