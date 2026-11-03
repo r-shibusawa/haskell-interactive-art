@@ -2,7 +2,7 @@
 --   ffmpeg やデバイスが無いときは合成信号に切りかえ、スケッチは止まらない。
 --   micLive / camLive で本物かどうかを調べられる。
 module Art.Device
-  ( Mic, startMic, micLevel, micSpectrum, micLive
+  ( Mic, startMic, micLevel, micSpectrum, micSamples, micLive
   , Camera, startCamera, cameraFrame, cameraSize, camLive, camGray, camImage
   ) where
 
@@ -72,8 +72,9 @@ startMic = do
 micLive :: Mic -> IO Bool
 micLive = readIORef . micOn
 
-samples :: Mic -> IO [Float]
-samples m = do
+-- | 直近の波形（512 サンプル、22050 Hz、-1〜1）
+micSamples :: Mic -> IO [Float]
+micSamples m = do
   live <- readIORef (micOn m)
   if live then readIORef (micBuf m) else do
     t <- realToFrac <$> getMonotonicTime
@@ -83,13 +84,13 @@ samples m = do
 -- | 音量（RMS、0〜1）
 micLevel :: Mic -> IO Float
 micLevel m = do
-  xs <- samples m
+  xs <- micSamples m
   pure (sqrt (sum (map (\x -> x * x) xs) / fromIntegral micN))
 
 -- | 低い音〜高い音の強さ（256 個、0〜1）
 micSpectrum :: Mic -> IO [Float]
 micSpectrum m = do
-  xs <- samples m
+  xs <- micSamples m
   let win = zipWith (\i x -> x * (0.5 - 0.5 * cos (2 * pi * fromIntegral i / fromIntegral micN))) [0 :: Int ..] xs
   pure (map (\z -> min 1 (magnitude z / 40)) (take 256 (fft (map (:+ 0) win))))
 

@@ -115,6 +115,486 @@ executable s1-15
   main-is:        Main.hs
   build-depends:  haskell-interactive-art
 
+executable s2-00
+  import:         shared
+  hs-source-dirs: series2/sketches/00_circles
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s2-01
+  import:         shared
+  hs-source-dirs: series2/sketches/01_fractal_tree
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s2-02
+  import:         shared
+  hs-source-dirs: series2/sketches/02_wind_tree
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s2-03
+  import:         shared
+  hs-source-dirs: series2/sketches/03_lsystem
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s2-04
+  import:         shared
+  hs-source-dirs: series2/sketches/04_fern
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s2-05
+  import:         shared
+  hs-source-dirs: series2/sketches/05_sierpinski
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s2-06
+  import:         shared
+  hs-source-dirs: series2/sketches/06_koch
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s2-07
+  import:         shared
+  hs-source-dirs: series2/sketches/07_chaos_game
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s2-08
+  import:         shared
+  hs-source-dirs: series2/sketches/08_mandelbrot
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s2-09
+  import:         shared
+  hs-source-dirs: series2/sketches/09_julia_mouse
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s2-10
+  import:         shared
+  hs-source-dirs: series2/sketches/10_sound_tree
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s2-11
+  import:         shared
+  hs-source-dirs: series2/sketches/11_cantor_rhythm
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s2-12
+  import:         shared
+  hs-source-dirs: series2/sketches/12_fractal_brush
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s2-13
+  import:         shared
+  hs-source-dirs: series2/sketches/13_infinite_zoom
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s2-14
+  import:         shared
+  hs-source-dirs: series2/sketches/14_mountains
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s2-15
+  import:         shared
+  hs-source-dirs: series2/sketches/15_julia_sound
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s3-00
+  import:         shared
+  hs-source-dirs: series3/sketches/00_random_walk
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s3-01
+  import:         shared
+  hs-source-dirs: series3/sketches/01_cellular_1d
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s3-02
+  import:         shared
+  hs-source-dirs: series3/sketches/02_game_of_life
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s3-03
+  import:         shared
+  hs-source-dirs: series3/sketches/03_forest_fire
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s3-04
+  import:         shared
+  hs-source-dirs: series3/sketches/04_reaction_diffusion
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s3-05
+  import:         shared
+  hs-source-dirs: series3/sketches/05_boids
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s3-06
+  import:         shared
+  hs-source-dirs: series3/sketches/06_ants
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s3-07
+  import:         shared
+  hs-source-dirs: series3/sketches/07_predator_prey
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s3-08
+  import:         shared
+  hs-source-dirs: series3/sketches/08_evolution
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s3-09
+  import:         shared
+  hs-source-dirs: series3/sketches/09_smart_rockets
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s3-10
+  import:         shared
+  hs-source-dirs: series3/sketches/10_life_music
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s3-11
+  import:         shared
+  hs-source-dirs: series3/sketches/11_mic_flock
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s3-12
+  import:         shared
+  hs-source-dirs: series3/sketches/12_my_life_rules
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s3-13
+  import:         shared
+  hs-source-dirs: series3/sketches/13_particle_life
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s3-14
+  import:         shared
+  hs-source-dirs: series3/sketches/14_langton_ant
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s3-15
+  import:         shared
+  hs-source-dirs: series3/sketches/15_slime_mold
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s4-00
+  import:         shared
+  hs-source-dirs: series4/sketches/00_logistic
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s4-01
+  import:         shared
+  hs-source-dirs: series4/sketches/01_cobweb
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s4-02
+  import:         shared
+  hs-source-dirs: series4/sketches/02_double_pendulum
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s4-03
+  import:         shared
+  hs-source-dirs: series4/sketches/03_three_body
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s4-04
+  import:         shared
+  hs-source-dirs: series4/sketches/04_lorenz
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s4-05
+  import:         shared
+  hs-source-dirs: series4/sketches/05_attractors
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s4-06
+  import:         shared
+  hs-source-dirs: series4/sketches/06_standard_map
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s4-07
+  import:         shared
+  hs-source-dirs: series4/sketches/07_bifurcation
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s4-08
+  import:         shared
+  hs-source-dirs: series4/sketches/08_sensitivity
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s4-09
+  import:         shared
+  hs-source-dirs: series4/sketches/09_bouncing_ball
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s4-10
+  import:         shared
+  hs-source-dirs: series4/sketches/10_chaos_melody
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s4-11
+  import:         shared
+  hs-source-dirs: series4/sketches/11_mic_chaos
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s4-12
+  import:         shared
+  hs-source-dirs: series4/sketches/12_attractor_brush
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s4-13
+  import:         shared
+  hs-source-dirs: series4/sketches/13_pendulum_fan
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s4-14
+  import:         shared
+  hs-source-dirs: series4/sketches/14_rossler
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s4-15
+  import:         shared
+  hs-source-dirs: series4/sketches/15_voice_pendulums
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s5-00
+  import:         shared
+  hs-source-dirs: series5/sketches/00_sine_wave
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s5-01
+  import:         shared
+  hs-source-dirs: series5/sketches/01_add_waves
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s5-02
+  import:         shared
+  hs-source-dirs: series5/sketches/02_sampling
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s5-03
+  import:         shared
+  hs-source-dirs: series5/sketches/03_aliasing_wheel
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s5-04
+  import:         shared
+  hs-source-dirs: series5/sketches/04_quantization
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s5-05
+  import:         shared
+  hs-source-dirs: series5/sketches/05_dft
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s5-06
+  import:         shared
+  hs-source-dirs: series5/sketches/06_epicycles
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s5-07
+  import:         shared
+  hs-source-dirs: series5/sketches/07_spectrogram
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s5-08
+  import:         shared
+  hs-source-dirs: series5/sketches/08_moving_average
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s5-09
+  import:         shared
+  hs-source-dirs: series5/sketches/09_image_filter
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s5-10
+  import:         shared
+  hs-source-dirs: series5/sketches/10_synth_filter
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s5-11
+  import:         shared
+  hs-source-dirs: series5/sketches/11_mic_tuner
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s5-12
+  import:         shared
+  hs-source-dirs: series5/sketches/12_signal_brush
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s5-13
+  import:         shared
+  hs-source-dirs: series5/sketches/13_denoise
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s5-14
+  import:         shared
+  hs-source-dirs: series5/sketches/14_doppler
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s5-15
+  import:         shared
+  hs-source-dirs: series5/sketches/15_beats
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s6-00
+  import:         shared
+  hs-source-dirs: series6/sketches/00_binary_message
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s6-01
+  import:         shared
+  hs-source-dirs: series6/sketches/01_entropy
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s6-02
+  import:         shared
+  hs-source-dirs: series6/sketches/02_am_fm
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s6-03
+  import:         shared
+  hs-source-dirs: series6/sketches/03_digital_modulation
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s6-04
+  import:         shared
+  hs-source-dirs: series6/sketches/04_constellation
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s6-05
+  import:         shared
+  hs-source-dirs: series6/sketches/05_noisy_channel
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s6-06
+  import:         shared
+  hs-source-dirs: series6/sketches/06_hamming
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s6-07
+  import:         shared
+  hs-source-dirs: series6/sketches/07_error_rates
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s6-08
+  import:         shared
+  hs-source-dirs: series6/sketches/08_huffman
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s6-09
+  import:         shared
+  hs-source-dirs: series6/sketches/09_xor_cipher
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s6-10
+  import:         shared
+  hs-source-dirs: series6/sketches/10_dtmf
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s6-11
+  import:         shared
+  hs-source-dirs: series6/sketches/11_mic_morse
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s6-12
+  import:         shared
+  hs-source-dirs: series6/sketches/12_packet_network
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s6-13
+  import:         shared
+  hs-source-dirs: series6/sketches/13_shannon_capacity
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s6-14
+  import:         shared
+  hs-source-dirs: series6/sketches/14_cdma
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s6-15
+  import:         shared
+  hs-source-dirs: series6/sketches/15_frequency_hopping
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
 executable s22-00
   import:         shared
   hs-source-dirs: series22/sketches/00_nearest_site
