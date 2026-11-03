@@ -40,6 +40,12 @@ spawn args
             Right mh -> mh
             Left _ -> Nothing
 
+-- 合成信号用の時刻。Float の桁落ちを避けるため、小さな値に折り返す
+demoTime :: IO Float
+demoTime = do
+  t <- getMonotonicTime
+  pure (realToFrac (t - 3600 * fromIntegral (floor (t / 3600) :: Int)))
+
 ---------------------------------------------------------------- マイク
 
 data Mic = Mic { micBuf :: IORef [Float], micOn :: IORef Bool }
@@ -77,7 +83,7 @@ micSamples :: Mic -> IO [Float]
 micSamples m = do
   live <- readIORef (micOn m)
   if live then readIORef (micBuf m) else do
-    t <- realToFrac <$> getMonotonicTime
+    t <- demoTime
     let amp = 0.08 + 0.07 * sin (t * 1.3) :: Float
     pure [ amp * (sin (fromIntegral i * 0.09 + t * 5) + 0.5 * sin (fromIntegral i * 0.31)) | i <- [0 .. micN - 1 :: Int] ]
 
@@ -147,7 +153,7 @@ cameraFrame :: Camera -> IO B.ByteString
 cameraFrame c = do
   live <- readIORef (camOn c)
   if live then readIORef (camBuf c) else do
-    t <- realToFrac <$> getMonotonicTime
+    t <- demoTime
     pure (synthetic (camW c) (camH c) t)
 
 synthetic :: Int -> Int -> Float -> B.ByteString
