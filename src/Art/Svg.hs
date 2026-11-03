@@ -31,8 +31,8 @@ pictureStats = go (0, 0)
       Arc a b r -> add acc 1 (bad a + bad b + bad r)
       ThickArc a b r w -> add acc 1 (bad a + bad b + bad r + bad w)
       Text s -> add acc (1 + length s `div` 4) 0
-      Bitmap _ -> add acc 1 0
-      BitmapSection _ _ -> add acc 1 0
+      Bitmap bd -> bd `seq` add acc 1 0
+      BitmapSection _ bd -> bd `seq` add acc 1 0
       Color c p -> c `seq` go acc p
       Translate x y p -> go (add acc 0 (bad x + bad y)) p
       Rotate a p -> go (add acc 0 (bad a)) p
