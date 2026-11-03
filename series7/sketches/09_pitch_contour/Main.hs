@@ -4,8 +4,6 @@
 -- 録音 → 再生 で、自分の歌がピコピコ音で返ってくる
 -- クリックでマイク ON → スペースで録音開始・停止 → P で再生 / C で消す
 -- ============================================
--- Art.Device から受け取れるのはスペクトルだけなので、自己相関は
--- 「パワースペクトルをフーリエ変換すると自己相関になる」という関係（ウィーナー・ヒンチンの定理）で計算する。
 module Main (main) where
 
 import Art
@@ -56,9 +54,8 @@ stepWorld env w0 = do
       live <- micLive mic
       let wl = w0 { wLive = live }
       if not (wRecording wl) then pure wl else do
-        level <- micLevel mic
-        spec <- micSpectrum mic
-        let f = detectPitch level spec
+        buf <- micSamples mic
+        let f = detectPitch (U.fromList buf)
             m = if f > 0 then Just (69 + 12 * logBase 2 (f / 440)) else Nothing
             wr = wl { wContour = m : wContour wl, wCount = wCount wl + 1 }
         pure (if wCount wr > maxFrames then stopRecording wr else wr)
@@ -86,35 +83,24 @@ transcribe contour =
            (_, Nothing) -> (keep cur acc, Nothing)
            (_, Just r)  -> (keep cur acc, Just (Note r i 1))
 
--- 測る窓の長さ（micSpectrum のもとになるサンプル数）
-windowN :: Int
-windowN = 512
-
 sampleRate :: Float
-sampleRate = 22050
+sampleRate = 22050         -- マイクのサンプリング周波数
 
-cosTable :: U.Vector Float
-cosTable = U.generate windowN (\i -> cos (tau * fromIntegral i / fromIntegral windowN))
-
--- ★ 自己相関で高さを測る：いちばんよく重なるずらし幅（lag）が周期。見つからなければ -1
-detectPitch :: Float -> [Float] -> Float
-detectPitch level spec
-  | level < 0.01 = -1
+-- ★ 自己相関で高さを測る：波形を lag だけずらして、いちばんよく重なるずらし幅が周期。見つからなければ -1
+detectPitch :: U.Vector Float -> Float
+detectPitch buf
+  | n == 0 || sqrt (U.sum (U.map (\x -> x * x) buf) / fromIntegral n) < 0.01 = -1
   | bestCorr < 0.001 = -1
   | otherwise = sampleRate / fromIntegral best
   where
-    power = U.fromListN 256 (map (\s -> (s * 40) * (s * 40)) spec ++ repeat 0)
+    n = U.length buf
     corrAt :: Int -> Float
-    corrAt lag =
-      let s = U.ifoldl' (\acc k p -> acc + p * cosTable U.! ((k * lag) `mod` windowN)) 0 power
-          n = fromIntegral windowN
-          -- 窓をかけた分の補正（ハン窓の自己相関で割る）
-      in 2 / n * s / (n * (0.25 + 0.125 * cosTable U.! lag))
+    corrAt lag = U.sum (U.zipWith (*) buf (U.drop lag buf)) / fromIntegral (n - lag)
     lagMin = floor (sampleRate / 1000) :: Int     -- 1000 Hz
-    lagMax = floor (sampleRate / 110) :: Int      -- 110 Hz（窓が短いのでこれより低い音は測らない）
+    lagMax = floor (sampleRate / 80) :: Int       -- 80 Hz
     (best, bestCorr) = foldl'
       (\b@(_, bc) lag -> let c = corrAt lag in if c > bc then (lag, c) else b)
-      (-1 :: Int, 0 :: Float) [lagMin .. lagMax - 1]
+      (-1 :: Int, 0 :: Float) [lagMin .. min lagMax (n - 1) - 1]
 
 drawWorld :: Env -> World -> Picture
 drawWorld env w = Pictures (staff ++ points ++ noteBoxes ++ hud)
