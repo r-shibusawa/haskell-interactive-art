@@ -1,0 +1,8 @@
+dist-newstyle/
+.build/
+.ghc.environment.*
+*.pdf
+*.svg
+.DS_Store
+.claude/
+tools/env.local

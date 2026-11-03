@@ -1,0 +1,20 @@
+cabal-version: 2.4
+name:          haskell-interactive-art
+version:       1.0.0.0
+synopsis:      Interactive art and mathematics sketches in Haskell (gloss)
+license:       MIT
+license-file:  LICENSE
+author:        r-shibusawa
+build-type:    Simple
+
+common shared
+  default-language: GHC2021
+  ghc-options:      -O1 -threaded
+  default-extensions: BangPatterns
+  build-depends:    base >=4.16 && <5, gloss >=1.13, containers, array, vector, bytestring, random
+
+library
+  import:          shared
+  hs-source-dirs:  src
+  exposed-modules: Art, Art.Sketch, Art.Draw, Art.Sound, Art.Device, Art.Svg, Art.Runtime
+  build-depends:   process, directory, time, OpenGL
