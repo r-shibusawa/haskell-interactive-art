@@ -18,3 +18,291 @@ library
   hs-source-dirs:  src
   exposed-modules: Art, Art.Sketch, Art.Draw, Art.Sound, Art.Device, Art.Svg, Art.Runtime
   build-depends:   process, directory, time, OpenGL
+
+executable s1-00
+  import:         shared
+  hs-source-dirs: series1/sketches/00_hello
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s1-01
+  import:         shared
+  hs-source-dirs: series1/sketches/01_shapes_face
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s1-02
+  import:         shared
+  hs-source-dirs: series1/sketches/02_mouse_paint
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s1-03
+  import:         shared
+  hs-source-dirs: series1/sketches/03_rainbow_brush
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s1-04
+  import:         shared
+  hs-source-dirs: series1/sketches/04_kaleidoscope
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s1-05
+  import:         shared
+  hs-source-dirs: series1/sketches/05_generative
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s1-06
+  import:         shared
+  hs-source-dirs: series1/sketches/06_fireworks
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s1-07
+  import:         shared
+  hs-source-dirs: series1/sketches/07_sound_balls
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s1-08
+  import:         shared
+  hs-source-dirs: series1/sketches/08_theremin
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s1-09
+  import:         shared
+  hs-source-dirs: series1/sketches/09_key_piano
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s1-10
+  import:         shared
+  hs-source-dirs: series1/sketches/10_mic_visualizer
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s1-11
+  import:         shared
+  hs-source-dirs: series1/sketches/11_voice_monster
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s1-12
+  import:         shared
+  hs-source-dirs: series1/sketches/12_webcam_mosaic
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s1-13
+  import:         shared
+  hs-source-dirs: series1/sketches/13_sound_particles
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s1-14
+  import:         shared
+  hs-source-dirs: series1/sketches/14_livecoding
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s1-15
+  import:         shared
+  hs-source-dirs: series1/sketches/15_teachable_machine
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s22-00
+  import:         shared
+  hs-source-dirs: series22/sketches/00_nearest_site
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s22-01
+  import:         shared
+  hs-source-dirs: series22/sketches/01_bisector_construction
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s22-02
+  import:         shared
+  hs-source-dirs: series22/sketches/02_distance_metrics
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s22-03
+  import:         shared
+  hs-source-dirs: series22/sketches/03_delaunay_bowyer_watson
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s22-04
+  import:         shared
+  hs-source-dirs: series22/sketches/04_duality
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s22-05
+  import:         shared
+  hs-source-dirs: series22/sketches/05_fortune_sweep
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s22-06
+  import:         shared
+  hs-source-dirs: series22/sketches/06_lloyd_relaxation
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s22-07
+  import:         shared
+  hs-source-dirs: series22/sketches/07_stippling
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s22-08
+  import:         shared
+  hs-source-dirs: series22/sketches/08_weighted_voronoi
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s22-09
+  import:         shared
+  hs-source-dirs: series22/sketches/09_largest_empty_circle
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s22-10
+  import:         shared
+  hs-source-dirs: series22/sketches/10_nature_worley
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s22-11
+  import:         shared
+  hs-source-dirs: series22/sketches/11_moving_territories
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s22-12
+  import:         shared
+  hs-source-dirs: series22/sketches/12_path_planning
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s22-13
+  import:         shared
+  hs-source-dirs: series22/sketches/13_voronoi_sound
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s22-14
+  import:         shared
+  hs-source-dirs: series22/sketches/14_voronoi_brush
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s22-15
+  import:         shared
+  hs-source-dirs: series22/sketches/15_webcam_mosaic
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s40-00
+  import:         shared
+  hs-source-dirs: series40/sketches/00_curvature_curve
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s40-01
+  import:         shared
+  hs-source-dirs: series40/sketches/01_frenet_frame
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s40-02
+  import:         shared
+  hs-source-dirs: series40/sketches/02_evolute_involute
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s40-03
+  import:         shared
+  hs-source-dirs: series40/sketches/03_surface_zoo
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s40-04
+  import:         shared
+  hs-source-dirs: series40/sketches/04_gauss_curvature
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s40-05
+  import:         shared
+  hs-source-dirs: series40/sketches/05_principal_curvatures
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s40-06
+  import:         shared
+  hs-source-dirs: series40/sketches/06_geodesics
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s40-07
+  import:         shared
+  hs-source-dirs: series40/sketches/07_parallel_transport
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s40-08
+  import:         shared
+  hs-source-dirs: series40/sketches/08_gauss_bonnet
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s40-09
+  import:         shared
+  hs-source-dirs: series40/sketches/09_minimal_surfaces
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s40-10
+  import:         shared
+  hs-source-dirs: series40/sketches/10_curve_shortening
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s40-11
+  import:         shared
+  hs-source-dirs: series40/sketches/11_developable
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s40-12
+  import:         shared
+  hs-source-dirs: series40/sketches/12_hyperbolic_pseudosphere
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s40-13
+  import:         shared
+  hs-source-dirs: series40/sketches/13_curvature_sound
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s40-14
+  import:         shared
+  hs-source-dirs: series40/sketches/14_frenet_brush
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s40-15
+  import:         shared
+  hs-source-dirs: series40/sketches/15_webcam_surface
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
