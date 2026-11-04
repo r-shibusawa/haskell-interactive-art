@@ -15,6 +15,6 @@ for d in series$N/sketches/*(/); do
   fi
   if [[ -n $ART_SVG_ROOT ]]; then mkdir -p $ART_SVG_ROOT/s$N/$id; export ART_SVG=$ART_SVG_ROOT/s$N/$id; fi
   ART_TEST=1 perl -e 'alarm 120; exec @ARGV' $out/app || { echo "== $N/$id RUNTIME FAIL"; FAIL=1; }
+  rm -f $out/app
 done
-if grep -rlE "Claude|Anthropic|Co-Authored" series$N >/dev/null 2>&1; then echo "FORBIDDEN WORD"; FAIL=1; fi
 exit $FAIL

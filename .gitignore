@@ -4,5 +4,4 @@ dist-newstyle/
 *.pdf
 *.svg
 .DS_Store
-.claude/
 tools/env.local
