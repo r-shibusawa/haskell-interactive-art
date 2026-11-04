@@ -101,7 +101,7 @@ drawWorld w = Pictures (arcs ++ balls ++ hud)
           ++ " (fewest swaps). Clicked swaps: " ++ show (wSwaps w))
       , txt px (y + 70) 18 (gray 0.12) ("Order: lcm(" ++ intercalate ", " (map show lens) ++ ") = " ++ show ord)
       , txt px (y + 96) 15 (gray 0.43) ("Press Space " ++ show ord ++ " times to return to the start")
-      , txt px (y + 140) 18 (gray 0.12) ("Now = sigma" ++ (if wPower w > 1 then "^" ++ show (wPower w) else "") ++ "  (sigma = what Space repeats)")
+      , txt px (y + 140) 18 (gray 0.12) ("Now = " ++ (if wPower w == 0 then "identity (back to the start)" else "sigma" ++ (if wPower w > 1 then "^" ++ show (wPower w) else "")) ++ "  (sigma = what Space repeats)")
       ]
 
 -- 置換を巡回に分ける（位置 i → arr[i] をたどる）

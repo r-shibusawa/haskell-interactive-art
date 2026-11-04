@@ -65,16 +65,27 @@ step env w =
 grow :: Color -> Point -> Point -> Float -> Float -> Picture
 grow c a@(ax, ay) (bx, by) f k = seg 2 c a (ax + (bx - ax) * k * f, ay + (by - ay) * k * f)
 
+-- a → b の直線を、点 pt を通りこすまで伸ばす（pt が a の後ろ側なら後ろへも。k は前へ伸ばす最低の長さ）
+growTo :: Color -> Point -> Point -> Float -> Point -> Float -> Picture
+growTo c (ax, ay) (bx, by) f (px, py) k =
+  let dx = bx - ax
+      dy = by - ay
+      l2 = dx * dx + dy * dy
+      t = if l2 > 0 then ((px - ax) * dx + (py - ay) * dy) / l2 else 0
+      t0 = min 0 (t * 1.08) * f
+      t1 = max k (t * 1.08) * f
+  in seg 2 c (ax + dx * t0, ay + dy * t0) (ax + dx * t1, ay + dy * t1)
+
 draw :: Env -> World -> Picture
 draw env w = view env $
   -- 直線 AB
   [ seg 2 (hsba 200 60 95 0.7) (0, y) (envW env, y) ]
   -- 作図（手順ごとに描く。今の手順はアニメーション）
-  ++ (if f 1 > 0 then [grow (hsba 45 70 100 0.7) p a (f 1) 2.2, grow (hsba 45 70 100 0.7) p b (f 1) 2.2] else [])
-  ++ [ grow (hsba 140 60 95 0.8) q c (f 2) 1.6 | f 2 > 0, Just _ <- [mr] ]
-  ++ concat [ [grow (hsba 15 75 100 0.8) a r (f 3) 1.5, grow (hsba 15 75 100 0.8) b q (f 3) 1.6] | f 3 > 0, Just r <- [mr], Just _ <- [ms] ]
+  ++ (if f 1 > 0 then [grow (hsba 45 70 100 0.7) p a (f 1) 2.2, maybe (grow (hsba 45 70 100 0.7) p b (f 1) 2.2) (\r -> growTo (hsba 45 70 100 0.7) p b (f 1) r 2.2) mr] else [])
+  ++ [ growTo (hsba 140 60 95 0.8) q c (f 2) r 1.6 | f 2 > 0, Just r <- [mr] ]
+  ++ concat [ [growTo (hsba 15 75 100 0.8) a r (f 3) s 1.5, growTo (hsba 15 75 100 0.8) b q (f 3) s 1.6] | f 3 > 0, Just r <- [mr], Just s <- [ms] ]
   ++ [ case md of
-         Just (_, dy) -> grow (hsba 300 50 100 0.9) p s (f 4) ((dy - snd p) / nz (snd s - snd p))
+         Just d -> growTo (hsba 300 50 100 0.9) p s (f 4) d 1
          Nothing -> grow (hsba 300 50 100 0.9) p s (f 4) 3
      | f 4 > 0, Just s <- [ms] ]
   -- 点

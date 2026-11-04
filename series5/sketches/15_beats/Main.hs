@@ -45,7 +45,7 @@ step env dt w = do
       f2 = fromIntegral (round (freq2 env * 10) :: Int) / 10
   when sound (playChord [f1, f2] 0.15 noteLen Sine)
   pure w
-    { wPhase = wrapF (2 * tau) (wPhase w + 0.5)   -- 包絡線が phase / 2 を使うので 4π で一周
+    { wPhase = wrapF tau (wPhase w + 0.5)
     , wTimer = if sound then noteGap else max 0 timer
     }
 
@@ -78,7 +78,7 @@ drawWorld env w = Pictures (twoWaves ++ [axis, summed, envelope 1, envelope (-1)
             v = (sin (tau * f1 * t + phase) + sin (tau * f2 * t + phase)) / 2 ]   -- ★ 足し算
     -- 包絡線（大きさのゆれ）
     envelope sgn = Color (hsb 0 90 100) $ thickPath 3
-      [ pt env x (mid2 - sgn * abs (cos (pi * (f2 - f1) * timeAt x + phase / 2)) * amp)
+      [ pt env x (mid2 - sgn * abs (cos (pi * (f2 - f1) * timeAt x)) * amp)
       | x <- [left, left + 2 .. right] ]
     info1 = text' env 20 40 16 (hsb 0 0 100)
       ("f1 = 440 Hz   f2 = " ++ nf1 f2 ++ " Hz (left/right)   Beats " ++ nf1 (abs (f2 - f1))

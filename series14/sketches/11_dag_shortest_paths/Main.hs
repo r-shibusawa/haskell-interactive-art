@@ -186,9 +186,7 @@ drawWorld env w = view env (concat [[title], edges, nodes, [statusLine 40 (sh - 
           else "Relax once each, left to right (in topological order). Below a point: d  Red line: pi" ]
     edges = zipWith edgePic [0 :: Int ..] (gEdges g)
     edgePic k e =
-      let span' = abs (nX (nodeOf g (eV e)) - nX (nodeOf g (eU e))) / max 1 ((sw - 180) / fi (max 1 (n - 1)))
-          side = if even k then -1 else 1
-          bend = if span' > 1.2 then side * min 60 (span' * 20) else 0
+      let bend = edgeBend sw g k e
           (c, wd)
             | eId e == vImproved v = (cGreen, 6)
             | eId e == vCurE v = (cYel, 5)
@@ -239,10 +237,17 @@ begin w
   | nCount (aG w) == 0 = Nothing
   | otherwise = Just (dagSp (aG w) (vSrc (aV w)))
 
+-- 線の曲がり具合（離れた点を結ぶ線は曲げる）。描くときとクリックの判定で同じ値を使う
+edgeBend :: Float -> Graph -> Int -> Edge -> Float
+edgeBend sw g k e =
+  let span' = abs (nX (nodeOf g (eV e)) - nX (nodeOf g (eU e))) / max 1 ((sw - 180) / fromIntegral (max 1 (nCount g - 1)))
+      side = if even k then -1 else 1
+  in if span' > 1.2 then side * min 60 (span' * 20) else 0
+
 onEvent :: Env -> Event -> World -> IO World
 onEvent env ev w = case ev of
   EventKey (MouseButton LeftButton) Down mods _ -> pure $
-    case weightClick (shift mods == Down) (-5) 9 m (aG w) of
+    case weightClick (shift mods == Down) (-5) 9 (edgeBend (envW env) (aG w)) m (aG w) of
       Just g1 -> resetRun w { aG = g1 }
       Nothing ->
         let i = nodeAtR 30 (aG w) m
@@ -835,12 +840,12 @@ editRubber env w
   where e = aEd w
 
 -- 線の数字（重み）をクリック → 重みを 1 つ増やす（Shift で減らす）。範囲 lo〜hi で一周
-weightClick :: Bool -> Int -> Int -> Point -> Graph -> Maybe Graph
-weightClick isShift lo hi p g = case find hit (gEdges g) of
+weightClick :: Bool -> Int -> Int -> (Int -> Edge -> Float) -> Point -> Graph -> Maybe Graph
+weightClick isShift lo hi bendOf p g = case find hit (zip [0 ..] (gEdges g)) of
   Nothing -> Nothing
-  Just e -> Just g { gEdges = map (\f -> if eId f == eId e then f { eW = turn (eW f) } else f) (gEdges g) }
+  Just (_, e) -> Just g { gEdges = map (\f -> if eId f == eId e then f { eW = turn (eW f) } else f) (gEdges g) }
   where
-    hit e = edgeLabelAt (xyOf g (eU e)) (xyOf g (eV e)) (bendRev g e) p
+    hit (k, e) = edgeLabelAt (xyOf g (eU e)) (xyOf g (eV e)) (bendOf k e) p
     turn v =
       let v1 = if isShift then v - 1 else v + 1
       in if v1 > hi then lo else if v1 < lo then hi else v1

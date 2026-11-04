@@ -138,7 +138,7 @@ drawWorld env w =
              , txt env (tx + 180) (y + 20) 20 (rgb255 40 200 140) ("low = " ++ nf 5 lo)
              , txt env tx (y + 54) 20 white ("up / low = " ++ nf 6 (up / lo))
              , txt env tx (y + 84) 20 (rgb255 255 190 40) ("cbrt(2)  = " ++ nf 6 (2 ** (1 / 3)))
-             , drawCubes env (tx + 300) (y + 150) 50 (up / lo)
+             , drawCubes env (tx + 280) (y + 150) 50 (up / lo)
              ]
         _ -> []
       hud =

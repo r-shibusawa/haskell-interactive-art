@@ -71,7 +71,8 @@ build w = refresh w { wCx = cx, wBetti = bettiNumbers cx, wH = h, wPair = gradie
     ph = wPhase w
     value i j
       | wSurf w == 2 = fi (i + j)
-      | otherwise = cos (2 * pi * fi i / fi n + ph) + 1.3 * cos (2 * pi * fi j / fi n + ph * 0.7)
+      -- クラインの壺は (n, j) と (0, n − j) を貼るので、j の cos は位相をずらせない（ずらすと貼り目で高さが飛んで臨界胞体が増える）
+      | otherwise = cos (2 * pi * fi i / fi n + ph) + 1.3 * cos (2 * pi * fi j / fi n + (if wSurf w == 3 then 0 else ph * 0.7))
     -- 同じ頂点には最初の位置の値を使う
     table = IM.fromListWith (\_ old -> old) [ (vid cx i j, value i j) | i <- [0 .. n], j <- [0 .. n] ]
     h = U.fromList [ val + 0.0001 * fi v | (v, val) <- IM.toAscList table ]
@@ -248,7 +249,7 @@ onEvent env ev w = pure $ case ev of
 -- ---------- やってみよう ----------
 -- 1. トーラスを 3D（T）で回して、2 つの鞍点（ライムの辺）がそれぞれ「穴をくぐる輪」「穴をまわる輪」をふさいでいるのを確かめよう
 -- 2. 球面（2）の極大（コーラルの面）は右下の角にある。折りたたみの貼り方で角がどこに行くか指でたどろう
--- 3. N で高さ関数の位相を変えても m は変わらない（b_k が下限だから）。変わる高さ関数を作れる？（cos を 2 周期にすると？）
+-- 3. N は位相をずらすだけで高さ関数の山と谷の数は同じなので、m は変わらない。b_k は下限なので m はこれより減らせないが、増やすことはできる（cos を 2 周期にすると？）
 -- 4. クラインの壺（3）とトーラスは m も b（Z2）も同じ。違いはどこに出る？（辺の貼り方 → 向き付け）
 
 -- ---------- 離散モース理論の道具 ----------

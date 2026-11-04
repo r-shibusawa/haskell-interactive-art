@@ -110,7 +110,7 @@ stepWorld env w0 = do
       (due, later) = span ((<= now) . fst) (wPending w1)
   w2 <- foldM (ring' now) w1 { wPending = later } due
   pure w2
-    { wPlayed = filter ((> now - 12) . fst) (wPlayed w2)
+    { wPlayed = filter ((> now - 8) . fst) (wPlayed w2)
     , wFlash = U.map (* 0.9) (wFlash w2) }
   where
     ring' _ w ev@(_, i) = do
@@ -127,11 +127,11 @@ draw env w = Pictures (
   -- 流れるダイヤ：右 = いま
   ++ [ box env (tx - 10) (ty - 30) (tw + 20) (rowH * fromIntegral n + 40) (hsba 0 0 100 0.06) ]
   ++ concatMap rowPic [0 .. n - 1]
-  ++ [ seg env 2 (hsb 90 90 100) (tx + tw, ty - 30) (tx + tw, ty + rowH * fromIntegral n + 10) ]
+  ++ [ seg env 2 (hsb 90 90 100) (nowX, ty - 30) (nowX, ty + rowH * fromIntegral n + 10) ]
   -- 周期の目盛り
-  ++ [ let x = tx + tw - fromIntegral m * realToFrac lam / 12 * tw
+  ++ [ let x = nowX - fromIntegral m * realToFrac lam / 12 * tw
        in seg env 1 (hsba 330 70 100 0.4) (x, ty + rowH * fromIntegral n + 10) (x, ty + rowH * fromIntegral n + 20)
-     | m <- [0 .. ceiling (12 / max lam 0.1) - 1 :: Int] ]
+     | m <- [0 .. ceiling (8 / max lam 0.1) - 1 :: Int] ]
   ++ [ txt env tx (ty + rowH * fromIntegral n + 44) 14 (hsb 330 70 100) ("Pink ticks = period lambda = " ++ nfd 3 lam ++ " s (largest mean cycle)")
      , txt env 20 30 16 (gray 1) ((if wAudio w then "Sound is on" else "Click to start the sound") ++ "   Click a node: tau + 0.25 (Shift: -)   1-3: wave (" ++ waveName ++ ")")
      , txt env 20 52 16 (gray 1) ("Up/Down: tempo x" ++ nfd 2 (wTempo w) ++ "   R: reset")
@@ -165,14 +165,15 @@ draw env w = Pictures (
     tw = envW env - tx - 40
     ty = 160
     rowH = 50
-    sx t = tx + tw - realToFrac (now - t) / 12 * tw
+    nowX = tx + tw * 8 / 12                  -- 緑の線 = いま、左 = 過去 8 秒、右 = これから 4 秒の予定
+    sx t = nowX - realToFrac (now - t) / 12 * tw
     barW i = max 2 (realToFrac (ts U.! i) / 12 * tw)
     rowPic i =
       let y = ty + fromIntegral i * rowH
       in [ seg env 1 (hsba 0 0 100 0.2) (tx, y) (tx + tw, y)
          , txt env tx (y - 16) 14 (gray 0.6) ("Proc " ++ show i ++ " (" ++ show (notes U.! i) ++ " Hz)") ]
          ++ [ box env (sx t) (y - 12) (barW i) 24 (hsba (hueOf i) 70 100 0.8) | (t, h) <- wPlayed w, h == i ]
-         ++ [ Color (hsba (hueOf i) 70 100 0.5) (rectLineP (sx t) (y - 12) (barW i) 24) | (t, h) <- wPending w, h == i, t < now + 12 ]
+         ++ [ Color (hsba (hueOf i) 70 100 0.5) (rectLineP (sx t) (y - 12) (barW i) 24) | (t, h) <- wPending w, h == i, t + ts U.! i < now + 4 ]
     rectLineP x y bw bh = let (gx, gy) = pt env (x + bw / 2) (y + bh / 2) in rectLine gx gy bw bh
 
 onEvent :: Env -> Event -> World -> IO World

@@ -50,7 +50,7 @@ reset w = do
   where
     makeBody :: Int -> IO Body
     makeBody i = do
-      speed <- randomRIO (1.4 - 0.05, 1.4 + 0.05)     -- ★ ほんの少しランダム
+      speed <- randomRIO (0.45 - 0.05, 0.45 + 0.05)   -- ★ ほんの少しランダム（速すぎると引力をふり切って飛び去る）
       let a = tau * fromIntegral i / 3
           r = 160
           pos = (cos a * r, -sin a * r)

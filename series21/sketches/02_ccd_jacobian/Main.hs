@@ -15,7 +15,7 @@ import Text.Printf (printf)
 linkLen, maxAngle, gain :: Float
 linkLen = 70                     -- ★ 1 本の長さ
 maxAngle = pi * 100 / 180        -- 関節制限（ラジアン）
-gain = 0.0012                    -- ★ ヤコビアン転置のステップ幅
+gain = 0.5                       -- ★ ヤコビアン転置のステップ幅（Σ|∂手先/∂q_i|² で割るので距離の単位によらない）
 
 itersPerFrame :: Int
 itersPerFrame = 1                -- ★ 1 フレームに何回反復するか
@@ -83,7 +83,7 @@ ccdStep lim (tx, ty) q0 = foldl' turn q0 [length q0 - 1, length q0 - 2 .. 0]
           d = aT - aH
       in clampQ lim (addAt i (atan2 (sin d) (cos d)) q)
 
--- ★ ヤコビアン転置：Δq = k · Jᵀ · (目標 − 手先)
+-- ★ ヤコビアン転置：Δq = k · Jᵀ · (目標 − 手先) / Σ|∂手先/∂q_i|²
 --   関節 i を少し回すと手先は「関節 i から手先へのベクトルを 90° 回したもの」の方向に動く
 jacobianStep :: Bool -> Point -> [Float] -> [Float]
 jacobianStep lim (tx, ty) q =
@@ -91,13 +91,14 @@ jacobianStep lim (tx, ty) q =
       (hx, hy) = handOf pts
       ex = tx - hx
       ey = -(ty - hy)                   -- 誤差（y 上向き）
-      dq (px, py) =
+      jac (px, py) =
         let rx = hx - px
             ry = -(hy - py)
-            jx = -ry                    -- ∂手先/∂q_i
-            jy = rx
-        in gain * (jx * ex + jy * ey)
-  in clampQ lim (zipWith (+) q (map dq pts))
+        in (-ry, rx)                    -- ∂手先/∂q_i
+      js = map jac (take (length q) pts)
+      norm = sum [jx * jx + jy * jy | (jx, jy) <- js]   -- px² の大きさ。割らないと 1 歩で何周も回って発散する
+      dq (jx, jy) = gain * (jx * ex + jy * ey) / (if norm > 0 then norm else 1)
+  in clampQ lim (zipWith (+) q (map dq js))
 
 doIteration :: Point -> World -> World
 doIteration t w =
@@ -188,7 +189,7 @@ onEvent env ev w = case ev of
 
 -- ---------- やってみよう ----------
 -- 1. 同じ目標に対して 1 と 2 で「収束までの回数」と「腕の形」を比べよう（グラフを見る）
--- 2. gain を 0.003 にすると速いが震える。0.0003 だと？ 安定と速さのトレードオフ
+-- 2. gain を 1.5 にすると速いが、届かない遠くの目標で腕が暴れる。0.1 だと？ 安定と速さのトレードオフ
 -- 3. L で関節制限をつけると届かない目標が出てくる。どんな場所？
 -- 4. 腕を 8 本にして、スペース＋→ で 1 回ずつ進め、CCD の「先端から順に」を目で追う
 

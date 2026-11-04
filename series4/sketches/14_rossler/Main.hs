@@ -35,6 +35,7 @@ cOf :: Env -> Float
 cOf env = remapC (snd (mouseP5 env)) 0 (envH env) 8 2
 
 startPos :: Int -> V
+startPos 2 = V 1.1 1.1 (-0.01)   -- x = y = z だと対称なまま 1 点に落ちてしまうので、少しくずす
 startPos 3 = V 0.1 0 0
 startPos _ = V 1 1 1
 

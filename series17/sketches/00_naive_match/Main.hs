@@ -49,6 +49,11 @@ restart w = w
 compareOnce :: World -> World
 compareOnce w
   | wFinished w = w
+  -- 前の回が不一致なら、ここで 1 つずらしてやり直す（赤いマスを 1 回ぶん見せてから動かす）
+  | Just (_, _, False) <- wLast w =
+      let s1 = wS w + 1
+          w1 = w { wS = s1, wJ = 0, wLast = Nothing }
+      in if s1 > length (wT w) - length (wP w) then w1 { wFinished = True } else compareOnce w1
   | otherwise =
       let n = length (wT w)
           m = length (wP w)
@@ -58,7 +63,7 @@ compareOnce w
           (s', j', found)
             | ok && j + 1 == m = (s + 1, 0, wFound w ++ [s])    -- 全部一致 → 見つけた！次のずらしへ
             | ok = (s, j + 1, wFound w)
-            | otherwise = (s + 1, 0, wFound w)                  -- 1 文字でも違えば、1 つずらしてやり直し
+            | otherwise = (s, j, wFound w)                      -- 1 文字でも違えば、次の回にずらす
       in w { wS = s', wJ = j', wFound = found, wComps = wComps w + 1
            , wPerShift = IM.insertWith (+) s 1 (wPerShift w)
            , wLast = Just (s + j, j, ok)

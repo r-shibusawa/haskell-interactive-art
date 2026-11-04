@@ -114,8 +114,8 @@ drawAll w = Pictures
   , txt gx ty 16 (hsb 0 0 90) ("True path    S = " ++ nf 4 (f s0))
   , txt gx (ty + 28) 16 (hsb 330 70 100) ("Pink path    S = " ++ nf 4 (f s1) ++ "  (diff " ++ nf 4 (f (s1 - s0)) ++ ")")
   , txt gx (ty + 60) 15 (hsb 0 0 75) ("Slope at e = 0: dS/de = " ++ nf 5 (f slope) ++ " ~ 0 (stationary)")
-  , txt gx (ty + 86) 15 (hsb 0 0 75) ("Curvature d2S/de2 = " ++ nf 3 (f curv) ++ (if curv > 0 then " > 0: minimum" else " < 0: maximum!"))
-  , if curv > 0 then Blank else txt gx (ty + 108) 14 (hsb 0 0 75) "So nature picks 'stationary', not 'minimum'."
+  , txt gx (ty + 86) 15 (hsb 0 0 75) ("Curvature d2S/de2 = " ++ nf 3 (f curv) ++ (if abs curv < 1e-6 then " = 0: not shifted (pink = true path)" else if curv > 0 then " > 0: minimum" else " < 0: maximum!"))
+  , if curv > -1e-6 then Blank else txt gx (ty + 108) 14 (hsb 0 0 75) "So nature picks 'stationary', not 'minimum'."
   , if wMode w == 2
       then Pictures
         [ txt gx (ty + 130) 14 (hsb 0 0 75) ("Spring: T = " ++ nf 2 (f bigT) ++ " s, half period pi/w = " ++ nf 2 (pi / f w0) ++ " s")

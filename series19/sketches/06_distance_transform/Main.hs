@@ -51,7 +51,8 @@ presetImg = gridFrom $ \x y ->
 -- ★ 距離変換：fg が True のマスについて、fg が False のいちばん近いマスまでの距離
 distanceTransform :: Int -> Grid -> U.Vector Float
 distanceTransform metric fg
-  | metric == 1 = U.map (realToFrac . sqrt) (edtSquared (\i -> not (fg U.! i)))
+  -- 背景が 1 マスもないと距離² は 1e9 のまま。市街地／チェス盤と同じ「遠すぎる」値にする
+  | metric == 1 = U.map (\v -> if v >= 1e8 then 1e6 else realToFrac (sqrt v)) (edtSquared (\i -> not (fg U.! i)))
   | otherwise = twoPass nb fg
   where
     nb = if metric == 2 then [(-1, 0), (0, -1)] else [(-1, 0), (0, -1), (-1, -1), (1, -1)]

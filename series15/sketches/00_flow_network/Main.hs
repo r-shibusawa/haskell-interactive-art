@@ -94,9 +94,9 @@ balanceSuper w = w { wEdges = map fix es }
               inn = sum [eF d | d <- es, not (eSup d), eV d == i]
           in e { eF = max 0 (if kindOf i == Source then out - inn else inn - out) }
 
--- 点 i に入る量と出る量
+-- 点 i に入る量と出る量（超出発点・超到着点の線は数えない。数えると出発点の差し引きが 0 になる）
 balance :: [Edge] -> Int -> (Int, Int)
-balance es i = (sum [eF e | e <- es, eV e == i], sum [eF e | e <- es, eU e == i])
+balance es i = (sum [eF e | e <- es, not (eSup e), eV e == i], sum [eF e | e <- es, not (eSup e), eU e == i])
 
 flowValue :: World -> Int
 flowValue w = sum

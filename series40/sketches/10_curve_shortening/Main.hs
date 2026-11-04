@@ -84,12 +84,16 @@ curveLength p =
   in foldl' (\s i -> s + dist2 (p U.! i) (p U.! ((i + 1) `mod` n))) 0 [0 .. n - 1]
 
 curveArea :: U.Vector Point -> Float
-curveArea p =
+curveArea p = abs (signedArea p)
+
+-- 符号つきの面積（点のまわる向きで符号が変わる）
+signedArea :: U.Vector Point -> Float
+signedArea p =
   let n = U.length p
       term s i = let (ax, ay) = p U.! i
                      (bx, by) = p U.! ((i + 1) `mod` n)
                  in s + ax * by - bx * ay
-  in abs (foldl' term 0 [0 .. n - 1]) / 2
+  in foldl' term 0 [0 .. n - 1] / 2
 
 ratioOf :: Float -> Float -> Float
 ratioOf l a = if a > 1 then l * l / (4 * pi * a) else 1
@@ -120,15 +124,16 @@ draw :: Env -> World -> Picture
 draw env w =
   let pts = wPts w
       n = U.length pts
-      -- 今の曲線（曲率の符号で色分け。プリセットの向きでは出っぱりが青、へこみが赤。逆向きに描くと色も逆）
-      curve = [ seg2 env (hsb (if kk > 0 then 215 else 5) (min 100 (abs kk * 100)) 100) 3.5 p b
+      -- 今の曲線（曲率で色：出っぱり = 赤、へこみ = 青。どちら向きに描いた曲線でも同じになるよう、向きで符号をそろえる）
+      orient = if signedArea pts >= 0 then 1 else -1
+      curve = [ seg2 env (hsb (if kk > 0 then 5 else 215) (min 100 (abs kk * 100)) 100) 3.5 p b
               | i <- [0 .. n - 1]
               , let (ax, ay) = pts U.! ((i - 1 + n) `mod` n)
               , let p@(x, y) = pts U.! i
               , let b@(bx, by) = pts U.! ((i + 1) `mod` n)
               , let lx = ax - 2 * x + bx
               , let ly = ay - 2 * y + by
-              , let k = (bx - ax) * ly - (by - ay) * lx          -- 符号つき曲率（向きに対して左か右か）
+              , let k = ((bx - ax) * ly - (by - ay) * lx) * orient   -- 符号つき曲率（+ = 出っぱり、− = へこみ）
               , let kk = k / (gridH * gridH * gridH) * 40 ]
       l = curveLength pts
       a = curveArea pts

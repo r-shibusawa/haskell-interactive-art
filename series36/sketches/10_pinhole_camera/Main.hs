@@ -95,7 +95,8 @@ drawAll env w =
       pxPerMm = sw / 48
       -- ---- 上：真上から見た図
       camX = hx - v * s * 2 - 10
-      bladeH = max 0 (60 - d * 10)                -- 穴が大きいときは羽根なし
+      gap = d * (if lens then 2 else 10)          -- 穴の見た目の半径（レンズは D が 25 まであるので縮めて描く）
+      bladeH = 60 - gap
       topObj o =
         let x = hx + oZ o * s
             y = hy + oLat o * s * 0.9
@@ -141,7 +142,7 @@ drawAll env w =
         , Color white (box camX (hy - 44) 4 88)        -- センサー
         , Color (hsb (if lens then 190 else 45) 60 100) (Pictures
             [ box (hx - 2) (hy - 60) 4 bladeH
-            , box (hx - 2) (hy + min 60 (d * 10)) 4 bladeH ])
+            , box (hx - 2) (hy + gap) 4 bladeH ])
         , Pictures (map topObj sorted)
         , if lens then Color (hsbA 190 80 100 60) (thickLine 2 (fx, hy - 70) (fx, hy + 70)) else Blank
         ])
