@@ -4146,3 +4146,387 @@ executable s43-15
   hs-source-dirs: series43/sketches/15_webcam_voronoi_dual
   main-is:        Main.hs
   build-depends:  haskell-interactive-art
+
+executable s44-00
+  import:         shared
+  hs-source-dirs: series44/sketches/00_streamlines
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s44-01
+  import:         shared
+  hs-source-dirs: series44/sketches/01_continuity
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s44-02
+  import:         shared
+  hs-source-dirs: series44/sketches/02_bernoulli
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s44-03
+  import:         shared
+  hs-source-dirs: series44/sketches/03_potential_flow
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s44-04
+  import:         shared
+  hs-source-dirs: series44/sketches/04_cylinder_lift
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s44-05
+  import:         shared
+  hs-source-dirs: series44/sketches/05_airfoil
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s44-06
+  import:         shared
+  hs-source-dirs: series44/sketches/06_viscosity_couette
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s44-07
+  import:         shared
+  hs-source-dirs: series44/sketches/07_navier_stokes
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s44-08
+  import:         shared
+  hs-source-dirs: series44/sketches/08_reynolds
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s44-09
+  import:         shared
+  hs-source-dirs: series44/sketches/09_karman_vortex
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s44-10
+  import:         shared
+  hs-source-dirs: series44/sketches/10_lid_cavity
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s44-11
+  import:         shared
+  hs-source-dirs: series44/sketches/11_vortex_dynamics
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s44-12
+  import:         shared
+  hs-source-dirs: series44/sketches/12_shallow_water
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s44-13
+  import:         shared
+  hs-source-dirs: series44/sketches/13_fluid_sound
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s44-14
+  import:         shared
+  hs-source-dirs: series44/sketches/14_ink_brush
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s44-15
+  import:         shared
+  hs-source-dirs: series44/sketches/15_webcam_fluid
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s45-00
+  import:         shared
+  hs-source-dirs: series45/sketches/00_four_bar
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s45-01
+  import:         shared
+  hs-source-dirs: series45/sketches/01_slider_crank
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s45-02
+  import:         shared
+  hs-source-dirs: series45/sketches/02_cam_follower
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s45-03
+  import:         shared
+  hs-source-dirs: series45/sketches/03_involute_gear
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s45-04
+  import:         shared
+  hs-source-dirs: series45/sketches/04_gear_train
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s45-05
+  import:         shared
+  hs-source-dirs: series45/sketches/05_planetary_gear
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s45-06
+  import:         shared
+  hs-source-dirs: series45/sketches/06_stress_strain
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s45-07
+  import:         shared
+  hs-source-dirs: series45/sketches/07_beam_bending
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s45-08
+  import:         shared
+  hs-source-dirs: series45/sketches/08_mohr_circle
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s45-09
+  import:         shared
+  hs-source-dirs: series45/sketches/09_buckling
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s45-10
+  import:         shared
+  hs-source-dirs: series45/sketches/10_vibration_resonance
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s45-11
+  import:         shared
+  hs-source-dirs: series45/sketches/11_rotor_balance
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s45-12
+  import:         shared
+  hs-source-dirs: series45/sketches/12_heat_engine
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s45-13
+  import:         shared
+  hs-source-dirs: series45/sketches/13_machine_sound
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s45-14
+  import:         shared
+  hs-source-dirs: series45/sketches/14_linkage_brush
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s45-15
+  import:         shared
+  hs-source-dirs: series45/sketches/15_webcam_gears
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s46-00
+  import:         shared
+  hs-source-dirs: series46/sketches/00_flock_predator
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s46-01
+  import:         shared
+  hs-source-dirs: series46/sketches/01_vicsek
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s46-02
+  import:         shared
+  hs-source-dirs: series46/sketches/02_fireflies_sync
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s46-03
+  import:         shared
+  hs-source-dirs: series46/sketches/03_fish_mill
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s46-04
+  import:         shared
+  hs-source-dirs: series46/sketches/04_aco_tsp
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s46-05
+  import:         shared
+  hs-source-dirs: series46/sketches/05_pso
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s46-06
+  import:         shared
+  hs-source-dirs: series46/sketches/06_abc_bees
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s46-07
+  import:         shared
+  hs-source-dirs: series46/sketches/07_firefly_algorithm
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s46-08
+  import:         shared
+  hs-source-dirs: series46/sketches/08_termite_mound
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s46-09
+  import:         shared
+  hs-source-dirs: series46/sketches/09_ant_sorting
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s46-10
+  import:         shared
+  hs-source-dirs: series46/sketches/10_ant_bridge
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s46-11
+  import:         shared
+  hs-source-dirs: series46/sketches/11_stigmergy_paths
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s46-12
+  import:         shared
+  hs-source-dirs: series46/sketches/12_honeybee_choice
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s46-13
+  import:         shared
+  hs-source-dirs: series46/sketches/13_consensus
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s46-14
+  import:         shared
+  hs-source-dirs: series46/sketches/14_swarm_sound
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s46-15
+  import:         shared
+  hs-source-dirs: series46/sketches/15_webcam_swarm
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s47-00
+  import:         shared
+  hs-source-dirs: series47/sketches/00_knot_gallery
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s47-01
+  import:         shared
+  hs-source-dirs: series47/sketches/01_draw_your_knot
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s47-02
+  import:         shared
+  hs-source-dirs: series47/sketches/02_reidemeister
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s47-03
+  import:         shared
+  hs-source-dirs: series47/sketches/03_unknotting
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s47-04
+  import:         shared
+  hs-source-dirs: series47/sketches/04_linking_number
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s47-05
+  import:         shared
+  hs-source-dirs: series47/sketches/05_fox_coloring
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s47-06
+  import:         shared
+  hs-source-dirs: series47/sketches/06_alexander
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s47-07
+  import:         shared
+  hs-source-dirs: series47/sketches/07_jones_bracket
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s47-08
+  import:         shared
+  hs-source-dirs: series47/sketches/08_braids
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s47-09
+  import:         shared
+  hs-source-dirs: series47/sketches/09_torus_knots
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s47-10
+  import:         shared
+  hs-source-dirs: series47/sketches/10_connected_sum
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s47-11
+  import:         shared
+  hs-source-dirs: series47/sketches/11_knot_table
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s47-12
+  import:         shared
+  hs-source-dirs: series47/sketches/12_seifert_surface
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s47-13
+  import:         shared
+  hs-source-dirs: series47/sketches/13_dna_knots
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s47-14
+  import:         shared
+  hs-source-dirs: series47/sketches/14_knot_music
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s47-15
+  import:         shared
+  hs-source-dirs: series47/sketches/15_knot_brush
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
