@@ -4530,3 +4530,291 @@ executable s47-15
   hs-source-dirs: series47/sketches/15_knot_brush
   main-is:        Main.hs
   build-depends:  haskell-interactive-art
+
+executable s48-00
+  import:         shared
+  hs-source-dirs: series48/sketches/00_muller_lyer
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s48-01
+  import:         shared
+  hs-source-dirs: series48/sketches/01_ebbinghaus_ponzo
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s48-02
+  import:         shared
+  hs-source-dirs: series48/sketches/02_tilt_illusions
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s48-03
+  import:         shared
+  hs-source-dirs: series48/sketches/03_size_constancy
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s48-04
+  import:         shared
+  hs-source-dirs: series48/sketches/04_simultaneous_contrast
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s48-05
+  import:         shared
+  hs-source-dirs: series48/sketches/05_shadow_checker
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s48-06
+  import:         shared
+  hs-source-dirs: series48/sketches/06_cornsweet
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s48-07
+  import:         shared
+  hs-source-dirs: series48/sketches/07_color_assimilation
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s48-08
+  import:         shared
+  hs-source-dirs: series48/sketches/08_hermann_grid
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s48-09
+  import:         shared
+  hs-source-dirs: series48/sketches/09_peripheral_drift
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s48-10
+  import:         shared
+  hs-source-dirs: series48/sketches/10_motion_aftereffect
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s48-11
+  import:         shared
+  hs-source-dirs: series48/sketches/11_afterimage
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s48-12
+  import:         shared
+  hs-source-dirs: series48/sketches/12_kanizsa
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s48-13
+  import:         shared
+  hs-source-dirs: series48/sketches/13_ambiguous_impossible
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s48-14
+  import:         shared
+  hs-source-dirs: series48/sketches/14_illusion_sound
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s48-15
+  import:         shared
+  hs-source-dirs: series48/sketches/15_webcam_illusion
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s49-00
+  import:         shared
+  hs-source-dirs: series49/sketches/00_convexity
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s49-01
+  import:         shared
+  hs-source-dirs: series49/sketches/01_optimality_conditions
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s49-02
+  import:         shared
+  hs-source-dirs: series49/sketches/02_gradient_descent_rate
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s49-03
+  import:         shared
+  hs-source-dirs: series49/sketches/03_line_search
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s49-04
+  import:         shared
+  hs-source-dirs: series49/sketches/04_momentum_nesterov
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s49-05
+  import:         shared
+  hs-source-dirs: series49/sketches/05_sgd_adam
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s49-06
+  import:         shared
+  hs-source-dirs: series49/sketches/06_newton
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s49-07
+  import:         shared
+  hs-source-dirs: series49/sketches/07_quasi_newton_bfgs
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s49-08
+  import:         shared
+  hs-source-dirs: series49/sketches/08_conjugate_gradient
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s49-09
+  import:         shared
+  hs-source-dirs: series49/sketches/09_lagrange
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s49-10
+  import:         shared
+  hs-source-dirs: series49/sketches/10_kkt
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s49-11
+  import:         shared
+  hs-source-dirs: series49/sketches/11_penalty_barrier
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s49-12
+  import:         shared
+  hs-source-dirs: series49/sketches/12_proximal_lasso
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s49-13
+  import:         shared
+  hs-source-dirs: series49/sketches/13_nonconvex_landscape
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s49-14
+  import:         shared
+  hs-source-dirs: series49/sketches/14_brachistochrone_sound
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s49-15
+  import:         shared
+  hs-source-dirs: series49/sketches/15_webcam_optimize
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s50-00
+  import:         shared
+  hs-source-dirs: series50/sketches/00_crisp_vs_fuzzy
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s50-01
+  import:         shared
+  hs-source-dirs: series50/sketches/01_membership_functions
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s50-02
+  import:         shared
+  hs-source-dirs: series50/sketches/02_fuzzy_operations
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s50-03
+  import:         shared
+  hs-source-dirs: series50/sketches/03_linguistic_hedges
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s50-04
+  import:         shared
+  hs-source-dirs: series50/sketches/04_fuzzy_relations
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s50-05
+  import:         shared
+  hs-source-dirs: series50/sketches/05_extension_principle
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s50-06
+  import:         shared
+  hs-source-dirs: series50/sketches/06_mamdani
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s50-07
+  import:         shared
+  hs-source-dirs: series50/sketches/07_defuzzification
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s50-08
+  import:         shared
+  hs-source-dirs: series50/sketches/08_takagi_sugeno
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s50-09
+  import:         shared
+  hs-source-dirs: series50/sketches/09_fuzzy_cart_pole
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s50-10
+  import:         shared
+  hs-source-dirs: series50/sketches/10_fuzzy_parking
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s50-11
+  import:         shared
+  hs-source-dirs: series50/sketches/11_fuzzy_c_means
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s50-12
+  import:         shared
+  hs-source-dirs: series50/sketches/12_fuzzy_image
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s50-13
+  import:         shared
+  hs-source-dirs: series50/sketches/13_fuzzy_decision
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s50-14
+  import:         shared
+  hs-source-dirs: series50/sketches/14_fuzzy_music
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s50-15
+  import:         shared
+  hs-source-dirs: series50/sketches/15_webcam_fuzzy
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
