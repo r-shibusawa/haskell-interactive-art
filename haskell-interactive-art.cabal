@@ -4818,3 +4818,195 @@ executable s50-15
   hs-source-dirs: series50/sketches/15_webcam_fuzzy
   main-is:        Main.hs
   build-depends:  haskell-interactive-art
+
+executable s51-00
+  import:         shared
+  hs-source-dirs: series51/sketches/00_feedback_loops
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s51-01
+  import:         shared
+  hs-source-dirs: series51/sketches/01_watt_governor
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s51-02
+  import:         shared
+  hs-source-dirs: series51/sketches/02_purpose_tremor
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s51-03
+  import:         shared
+  hs-source-dirs: series51/sketches/03_predictor
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s51-04
+  import:         shared
+  hs-source-dirs: series51/sketches/04_homeostat
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s51-05
+  import:         shared
+  hs-source-dirs: series51/sketches/05_requisite_variety
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s51-06
+  import:         shared
+  hs-source-dirs: series51/sketches/06_black_box
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s51-07
+  import:         shared
+  hs-source-dirs: series51/sketches/07_tortoise
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s51-08
+  import:         shared
+  hs-source-dirs: series51/sketches/08_braitenberg
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s51-09
+  import:         shared
+  hs-source-dirs: series51/sketches/09_mcculloch_pitts
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s51-10
+  import:         shared
+  hs-source-dirs: series51/sketches/10_autopoiesis
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s51-11
+  import:         shared
+  hs-source-dirs: series51/sketches/11_viable_system
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s51-12
+  import:         shared
+  hs-source-dirs: series51/sketches/12_mutual_observers
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s51-13
+  import:         shared
+  hs-source-dirs: series51/sketches/13_eigenform
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s51-14
+  import:         shared
+  hs-source-dirs: series51/sketches/14_musicolour
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s51-15
+  import:         shared
+  hs-source-dirs: series51/sketches/15_webcam_feedback
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s52-00
+  import:         shared
+  hs-source-dirs: series52/sketches/00_weber_law
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s52-01
+  import:         shared
+  hs-source-dirs: series52/sketches/01_fechner_scale
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s52-02
+  import:         shared
+  hs-source-dirs: series52/sketches/02_stevens_power
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s52-03
+  import:         shared
+  hs-source-dirs: series52/sketches/03_constant_stimuli
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s52-04
+  import:         shared
+  hs-source-dirs: series52/sketches/04_staircase
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s52-05
+  import:         shared
+  hs-source-dirs: series52/sketches/05_signal_detection
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s52-06
+  import:         shared
+  hs-source-dirs: series52/sketches/06_forced_choice
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s52-07
+  import:         shared
+  hs-source-dirs: series52/sketches/07_contrast_sensitivity
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s52-08
+  import:         shared
+  hs-source-dirs: series52/sketches/08_color_discrimination
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s52-09
+  import:         shared
+  hs-source-dirs: series52/sketches/09_hick_law
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s52-10
+  import:         shared
+  hs-source-dirs: series52/sketches/10_fitts_law
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s52-11
+  import:         shared
+  hs-source-dirs: series52/sketches/11_loudness_matching
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s52-12
+  import:         shared
+  hs-source-dirs: series52/sketches/12_pitch_discrimination
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s52-13
+  import:         shared
+  hs-source-dirs: series52/sketches/13_masking
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s52-14
+  import:         shared
+  hs-source-dirs: series52/sketches/14_audiovisual_sync
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s52-15
+  import:         shared
+  hs-source-dirs: series52/sketches/15_webcam_perceptual
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
