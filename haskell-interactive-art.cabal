@@ -5010,3 +5010,291 @@ executable s52-15
   hs-source-dirs: series52/sketches/15_webcam_perceptual
   main-is:        Main.hs
   build-depends:  haskell-interactive-art
+
+executable s53-00
+  import:         shared
+  hs-source-dirs: series53/sketches/00_seasons
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s53-01
+  import:         shared
+  hs-source-dirs: series53/sketches/01_moon_phases_eclipses
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s53-02
+  import:         shared
+  hs-source-dirs: series53/sketches/02_tides
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s53-03
+  import:         shared
+  hs-source-dirs: series53/sketches/03_starry_sky
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s53-04
+  import:         shared
+  hs-source-dirs: series53/sketches/04_planet_positions
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s53-05
+  import:         shared
+  hs-source-dirs: series53/sketches/05_retrograde
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s53-06
+  import:         shared
+  hs-source-dirs: series53/sketches/06_hohmann_transfer
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s53-07
+  import:         shared
+  hs-source-dirs: series53/sketches/07_gravity_assist
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s53-08
+  import:         shared
+  hs-source-dirs: series53/sketches/08_blackbody_stars
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s53-09
+  import:         shared
+  hs-source-dirs: series53/sketches/09_hr_diagram
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s53-10
+  import:         shared
+  hs-source-dirs: series53/sketches/10_distance_ladder
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s53-11
+  import:         shared
+  hs-source-dirs: series53/sketches/11_exoplanet_transit
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s53-12
+  import:         shared
+  hs-source-dirs: series53/sketches/12_galaxy_rotation
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s53-13
+  import:         shared
+  hs-source-dirs: series53/sketches/13_hubble_expansion
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s53-14
+  import:         shared
+  hs-source-dirs: series53/sketches/14_orbit_music
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s53-15
+  import:         shared
+  hs-source-dirs: series53/sketches/15_webcam_star_trails
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s54-00
+  import:         shared
+  hs-source-dirs: series54/sketches/00_coulomb
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s54-01
+  import:         shared
+  hs-source-dirs: series54/sketches/01_field_lines
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s54-02
+  import:         shared
+  hs-source-dirs: series54/sketches/02_gauss_law
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s54-03
+  import:         shared
+  hs-source-dirs: series54/sketches/03_capacitor
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s54-04
+  import:         shared
+  hs-source-dirs: series54/sketches/04_circuits
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s54-05
+  import:         shared
+  hs-source-dirs: series54/sketches/05_rc_circuit
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s54-06
+  import:         shared
+  hs-source-dirs: series54/sketches/06_rlc_resonance
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s54-07
+  import:         shared
+  hs-source-dirs: series54/sketches/07_biot_savart
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s54-08
+  import:         shared
+  hs-source-dirs: series54/sketches/08_lorentz_force
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s54-09
+  import:         shared
+  hs-source-dirs: series54/sketches/09_faraday_induction
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s54-10
+  import:         shared
+  hs-source-dirs: series54/sketches/10_motor_generator
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s54-11
+  import:         shared
+  hs-source-dirs: series54/sketches/11_fdtd_waves
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s54-12
+  import:         shared
+  hs-source-dirs: series54/sketches/12_dipole_radiation
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s54-13
+  import:         shared
+  hs-source-dirs: series54/sketches/13_em_spectrum
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s54-14
+  import:         shared
+  hs-source-dirs: series54/sketches/14_theremin
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s54-15
+  import:         shared
+  hs-source-dirs: series54/sketches/15_webcam_field
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s55-00
+  import:         shared
+  hs-source-dirs: series55/sketches/00_molecules_temperature
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s55-01
+  import:         shared
+  hs-source-dirs: series55/sketches/01_ideal_gas
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s55-02
+  import:         shared
+  hs-source-dirs: series55/sketches/02_heat_conduction
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s55-03
+  import:         shared
+  hs-source-dirs: series55/sketches/03_heat_capacity_phase
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s55-04
+  import:         shared
+  hs-source-dirs: series55/sketches/04_pv_processes
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s55-05
+  import:         shared
+  hs-source-dirs: series55/sketches/05_carnot_cycle
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s55-06
+  import:         shared
+  hs-source-dirs: series55/sketches/06_heat_pump
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s55-07
+  import:         shared
+  hs-source-dirs: series55/sketches/07_mixing_irreversibility
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s55-08
+  import:         shared
+  hs-source-dirs: series55/sketches/08_einstein_solid
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s55-09
+  import:         shared
+  hs-source-dirs: series55/sketches/09_boltzmann_distribution
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s55-10
+  import:         shared
+  hs-source-dirs: series55/sketches/10_maxwell_demon
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s55-11
+  import:         shared
+  hs-source-dirs: series55/sketches/11_ising_model
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s55-12
+  import:         shared
+  hs-source-dirs: series55/sketches/12_van_der_waals
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s55-13
+  import:         shared
+  hs-source-dirs: series55/sketches/13_brownian_diffusion
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s55-14
+  import:         shared
+  hs-source-dirs: series55/sketches/14_thermo_sound
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s55-15
+  import:         shared
+  hs-source-dirs: series55/sketches/15_webcam_heat
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
