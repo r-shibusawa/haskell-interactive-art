@@ -5298,3 +5298,387 @@ executable s55-15
   hs-source-dirs: series55/sketches/15_webcam_heat
   main-is:        Main.hs
   build-depends:  haskell-interactive-art
+
+executable s56-00
+  import:         shared
+  hs-source-dirs: series56/sketches/00_poset_hasse
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s56-01
+  import:         shared
+  hs-source-dirs: series56/sketches/01_divisor_lattice
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s56-02
+  import:         shared
+  hs-source-dirs: series56/sketches/02_powerset_lattice
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s56-03
+  import:         shared
+  hs-source-dirs: series56/sketches/03_join_meet
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s56-04
+  import:         shared
+  hs-source-dirs: series56/sketches/04_distributive_modular
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s56-05
+  import:         shared
+  hs-source-dirs: series56/sketches/05_complement_boolean
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s56-06
+  import:         shared
+  hs-source-dirs: series56/sketches/06_logic_circuits
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s56-07
+  import:         shared
+  hs-source-dirs: series56/sketches/07_galois_closure
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s56-08
+  import:         shared
+  hs-source-dirs: series56/sketches/08_formal_concept
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s56-09
+  import:         shared
+  hs-source-dirs: series56/sketches/09_knaster_tarski
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s56-10
+  import:         shared
+  hs-source-dirs: series56/sketches/10_dataflow_lattice
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s56-11
+  import:         shared
+  hs-source-dirs: series56/sketches/11_chains_antichains
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s56-12
+  import:         shared
+  hs-source-dirs: series56/sketches/12_dilworth
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s56-13
+  import:         shared
+  hs-source-dirs: series56/sketches/13_mobius_function
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s56-14
+  import:         shared
+  hs-source-dirs: series56/sketches/14_lattice_sound
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s56-15
+  import:         shared
+  hs-source-dirs: series56/sketches/15_webcam_lattice
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s57-00
+  import:         shared
+  hs-source-dirs: series57/sketches/00_complex_rotation
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s57-01
+  import:         shared
+  hs-source-dirs: series57/sketches/01_hamilton_rules
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s57-02
+  import:         shared
+  hs-source-dirs: series57/sketches/02_noncommutative
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s57-03
+  import:         shared
+  hs-source-dirs: series57/sketches/03_norm_inverse
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s57-04
+  import:         shared
+  hs-source-dirs: series57/sketches/04_rotation_qvq
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s57-05
+  import:         shared
+  hs-source-dirs: series57/sketches/05_gimbal_lock
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s57-06
+  import:         shared
+  hs-source-dirs: series57/sketches/06_slerp
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s57-07
+  import:         shared
+  hs-source-dirs: series57/sketches/07_double_cover
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s57-08
+  import:         shared
+  hs-source-dirs: series57/sketches/08_trackball
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s57-09
+  import:         shared
+  hs-source-dirs: series57/sketches/09_angular_velocity
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s57-10
+  import:         shared
+  hs-source-dirs: series57/sketches/10_four_d_rotation
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s57-11
+  import:         shared
+  hs-source-dirs: series57/sketches/11_quaternion_julia
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s57-12
+  import:         shared
+  hs-source-dirs: series57/sketches/12_cayley_dickson
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s57-13
+  import:         shared
+  hs-source-dirs: series57/sketches/13_octonion_fano
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s57-14
+  import:         shared
+  hs-source-dirs: series57/sketches/14_rotation_sound
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s57-15
+  import:         shared
+  hs-source-dirs: series57/sketches/15_webcam_quaternion
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s58-00
+  import:         shared
+  hs-source-dirs: series58/sketches/00_vector_products
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s58-01
+  import:         shared
+  hs-source-dirs: series58/sketches/01_geometric_product
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s58-02
+  import:         shared
+  hs-source-dirs: series58/sketches/02_blades_grades
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s58-03
+  import:         shared
+  hs-source-dirs: series58/sketches/03_complex_from_ga
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s58-04
+  import:         shared
+  hs-source-dirs: series58/sketches/04_reflections
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s58-05
+  import:         shared
+  hs-source-dirs: series58/sketches/05_rotors_2d
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s58-06
+  import:         shared
+  hs-source-dirs: series58/sketches/06_bivectors_3d
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s58-07
+  import:         shared
+  hs-source-dirs: series58/sketches/07_rotors_3d
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s58-08
+  import:         shared
+  hs-source-dirs: series58/sketches/08_area_volume_det
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s58-09
+  import:         shared
+  hs-source-dirs: series58/sketches/09_meet_join_dual
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s58-10
+  import:         shared
+  hs-source-dirs: series58/sketches/10_signatures
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s58-11
+  import:         shared
+  hs-source-dirs: series58/sketches/11_spacetime_algebra
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s58-12
+  import:         shared
+  hs-source-dirs: series58/sketches/12_conformal_ga
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s58-13
+  import:         shared
+  hs-source-dirs: series58/sketches/13_ga_physics
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s58-14
+  import:         shared
+  hs-source-dirs: series58/sketches/14_ga_sound
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s58-15
+  import:         shared
+  hs-source-dirs: series58/sketches/15_webcam_kaleidoscope_ga
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s59-00
+  import:         shared
+  hs-source-dirs: series59/sketches/00_waiting_arithmetic
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s59-01
+  import:         shared
+  hs-source-dirs: series59/sketches/01_semiring_laws
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s59-02
+  import:         shared
+  hs-source-dirs: series59/sketches/02_powers_roots
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s59-03
+  import:         shared
+  hs-source-dirs: series59/sketches/03_matrix_longest_path
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s59-04
+  import:         shared
+  hs-source-dirs: series59/sketches/04_kleene_star
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s59-05
+  import:         shared
+  hs-source-dirs: series59/sketches/05_linear_equations
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s59-06
+  import:         shared
+  hs-source-dirs: series59/sketches/06_train_timetable
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s59-07
+  import:         shared
+  hs-source-dirs: series59/sketches/07_production_line
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s59-08
+  import:         shared
+  hs-source-dirs: series59/sketches/08_eigen_cycle_time
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s59-09
+  import:         shared
+  hs-source-dirs: series59/sketches/09_transient_periodic
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s59-10
+  import:         shared
+  hs-source-dirs: series59/sketches/10_delay_propagation
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s59-11
+  import:         shared
+  hs-source-dirs: series59/sketches/11_petri_net
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s59-12
+  import:         shared
+  hs-source-dirs: series59/sketches/12_min_plus_paths
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s59-13
+  import:         shared
+  hs-source-dirs: series59/sketches/13_viterbi_dequantization
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s59-14
+  import:         shared
+  hs-source-dirs: series59/sketches/14_timetable_rhythm
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s59-15
+  import:         shared
+  hs-source-dirs: series59/sketches/15_webcam_maxplus
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
