@@ -5682,3 +5682,387 @@ executable s59-15
   hs-source-dirs: series59/sketches/15_webcam_maxplus
   main-is:        Main.hs
   build-depends:  haskell-interactive-art
+
+executable s60-00
+  import:         shared
+  hs-source-dirs: series60/sketches/00_mean_variance
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s60-01
+  import:         shared
+  hs-source-dirs: series60/sketches/01_projection_variance
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s60-02
+  import:         shared
+  hs-source-dirs: series60/sketches/02_covariance_eigen
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s60-03
+  import:         shared
+  hs-source-dirs: series60/sketches/03_pca_3d
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s60-04
+  import:         shared
+  hs-source-dirs: series60/sketches/04_power_iteration
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s60-05
+  import:         shared
+  hs-source-dirs: series60/sketches/05_svd
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s60-06
+  import:         shared
+  hs-source-dirs: series60/sketches/06_explained_variance
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s60-07
+  import:         shared
+  hs-source-dirs: series60/sketches/07_reconstruction
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s60-08
+  import:         shared
+  hs-source-dirs: series60/sketches/08_eigenfaces
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s60-09
+  import:         shared
+  hs-source-dirs: series60/sketches/09_draw_digits
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s60-10
+  import:         shared
+  hs-source-dirs: series60/sketches/10_standardize_whiten
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s60-11
+  import:         shared
+  hs-source-dirs: series60/sketches/11_kernel_pca
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s60-12
+  import:         shared
+  hs-source-dirs: series60/sketches/12_pca_vs_ica
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s60-13
+  import:         shared
+  hs-source-dirs: series60/sketches/13_outliers
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s60-14
+  import:         shared
+  hs-source-dirs: series60/sketches/14_timbre_pca
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s60-15
+  import:         shared
+  hs-source-dirs: series60/sketches/15_webcam_color_pca
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s61-00
+  import:         shared
+  hs-source-dirs: series61/sketches/00_distances
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s61-01
+  import:         shared
+  hs-source-dirs: series61/sketches/01_kmeans_objective
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s61-02
+  import:         shared
+  hs-source-dirs: series61/sketches/02_choose_k
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s61-03
+  import:         shared
+  hs-source-dirs: series61/sketches/03_kmeans_fails
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s61-04
+  import:         shared
+  hs-source-dirs: series61/sketches/04_hierarchical_linkage
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s61-05
+  import:         shared
+  hs-source-dirs: series61/sketches/05_dendrogram_cut
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s61-06
+  import:         shared
+  hs-source-dirs: series61/sketches/06_dbscan
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s61-07
+  import:         shared
+  hs-source-dirs: series61/sketches/07_mean_shift
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s61-08
+  import:         shared
+  hs-source-dirs: series61/sketches/08_gmm_em
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s61-09
+  import:         shared
+  hs-source-dirs: series61/sketches/09_spectral
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s61-10
+  import:         shared
+  hs-source-dirs: series61/sketches/10_evaluation
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s61-11
+  import:         shared
+  hs-source-dirs: series61/sketches/11_curse_of_dimension
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s61-12
+  import:         shared
+  hs-source-dirs: series61/sketches/12_som
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s61-13
+  import:         shared
+  hs-source-dirs: series61/sketches/13_vector_quantization
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s61-14
+  import:         shared
+  hs-source-dirs: series61/sketches/14_cluster_sound
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s61-15
+  import:         shared
+  hs-source-dirs: series61/sketches/15_webcam_segment
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s62-00
+  import:         shared
+  hs-source-dirs: series62/sketches/00_twenty_questions
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s62-01
+  import:         shared
+  hs-source-dirs: series62/sketches/01_entropy_gain
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s62-02
+  import:         shared
+  hs-source-dirs: series62/sketches/02_build_by_hand
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s62-03
+  import:         shared
+  hs-source-dirs: series62/sketches/03_id3_tennis
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s62-04
+  import:         shared
+  hs-source-dirs: series62/sketches/04_cart_regions
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s62-05
+  import:         shared
+  hs-source-dirs: series62/sketches/05_overfitting
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s62-06
+  import:         shared
+  hs-source-dirs: series62/sketches/06_pruning
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s62-07
+  import:         shared
+  hs-source-dirs: series62/sketches/07_regression_tree
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s62-08
+  import:         shared
+  hs-source-dirs: series62/sketches/08_bagging
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s62-09
+  import:         shared
+  hs-source-dirs: series62/sketches/09_random_forest
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s62-10
+  import:         shared
+  hs-source-dirs: series62/sketches/10_adaboost
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s62-11
+  import:         shared
+  hs-source-dirs: series62/sketches/11_gradient_boosting
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s62-12
+  import:         shared
+  hs-source-dirs: series62/sketches/12_feature_importance
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s62-13
+  import:         shared
+  hs-source-dirs: series62/sketches/13_tree_vs_others
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s62-14
+  import:         shared
+  hs-source-dirs: series62/sketches/14_tree_melody
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s62-15
+  import:         shared
+  hs-source-dirs: series62/sketches/15_webcam_tree_classifier
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s63-00
+  import:         shared
+  hs-source-dirs: series63/sketches/00_bandit
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s63-01
+  import:         shared
+  hs-source-dirs: series63/sketches/01_mdp_gridworld
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s63-02
+  import:         shared
+  hs-source-dirs: series63/sketches/02_value_iteration
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s63-03
+  import:         shared
+  hs-source-dirs: series63/sketches/03_policy_iteration
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s63-04
+  import:         shared
+  hs-source-dirs: series63/sketches/04_mc_vs_td
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s63-05
+  import:         shared
+  hs-source-dirs: series63/sketches/05_q_learning
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s63-06
+  import:         shared
+  hs-source-dirs: series63/sketches/06_cliff_sarsa
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s63-07
+  import:         shared
+  hs-source-dirs: series63/sketches/07_exploration
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s63-08
+  import:         shared
+  hs-source-dirs: series63/sketches/08_mountain_car
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s63-09
+  import:         shared
+  hs-source-dirs: series63/sketches/09_dyna_maze
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s63-10
+  import:         shared
+  hs-source-dirs: series63/sketches/10_reinforce
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s63-11
+  import:         shared
+  hs-source-dirs: series63/sketches/11_tiny_dqn
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s63-12
+  import:         shared
+  hs-source-dirs: series63/sketches/12_tictactoe_selfplay
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s63-13
+  import:         shared
+  hs-source-dirs: series63/sketches/13_reward_design
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s63-14
+  import:         shared
+  hs-source-dirs: series63/sketches/14_reward_by_ear
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s63-15
+  import:         shared
+  hs-source-dirs: series63/sketches/15_webcam_human_reward
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
