@@ -6066,3 +6066,291 @@ executable s63-15
   hs-source-dirs: series63/sketches/15_webcam_human_reward
   main-is:        Main.hs
   build-depends:  haskell-interactive-art
+
+executable s64-00
+  import:         shared
+  hs-source-dirs: series64/sketches/00_wisdom_of_crowds
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s64-01
+  import:         shared
+  hs-source-dirs: series64/sketches/01_condorcet_jury
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s64-02
+  import:         shared
+  hs-source-dirs: series64/sketches/02_bias_variance
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s64-03
+  import:         shared
+  hs-source-dirs: series64/sketches/03_correlation_limits
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s64-04
+  import:         shared
+  hs-source-dirs: series64/sketches/04_voting_heterogeneous
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s64-05
+  import:         shared
+  hs-source-dirs: series64/sketches/05_weighted_average
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s64-06
+  import:         shared
+  hs-source-dirs: series64/sketches/06_stacking
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s64-07
+  import:         shared
+  hs-source-dirs: series64/sketches/07_mixture_of_experts
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s64-08
+  import:         shared
+  hs-source-dirs: series64/sketches/08_margins
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s64-09
+  import:         shared
+  hs-source-dirs: series64/sketches/09_newton_boosting
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s64-10
+  import:         shared
+  hs-source-dirs: series64/sketches/10_randomization_diversity
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s64-11
+  import:         shared
+  hs-source-dirs: series64/sketches/11_diversity_measures
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s64-12
+  import:         shared
+  hs-source-dirs: series64/sketches/12_isolation_forest
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s64-13
+  import:         shared
+  hs-source-dirs: series64/sketches/13_ensemble_uncertainty
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s64-14
+  import:         shared
+  hs-source-dirs: series64/sketches/14_ensemble_choir
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s64-15
+  import:         shared
+  hs-source-dirs: series64/sketches/15_webcam_weighted_majority
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s65-00
+  import:         shared
+  hs-source-dirs: series65/sketches/00_weather_chain
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s65-01
+  import:         shared
+  hs-source-dirs: series65/sketches/01_n_step
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s65-02
+  import:         shared
+  hs-source-dirs: series65/sketches/02_stationary
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s65-03
+  import:         shared
+  hs-source-dirs: series65/sketches/03_classification
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s65-04
+  import:         shared
+  hs-source-dirs: series65/sketches/04_gamblers_ruin
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s65-05
+  import:         shared
+  hs-source-dirs: series65/sketches/05_snakes_ladders
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s65-06
+  import:         shared
+  hs-source-dirs: series65/sketches/06_graph_random_walk
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s65-07
+  import:         shared
+  hs-source-dirs: series65/sketches/07_card_shuffle
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s65-08
+  import:         shared
+  hs-source-dirs: series65/sketches/08_ngram_text
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s65-09
+  import:         shared
+  hs-source-dirs: series65/sketches/09_hmm_forward_backward
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s65-10
+  import:         shared
+  hs-source-dirs: series65/sketches/10_continuous_time
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s65-11
+  import:         shared
+  hs-source-dirs: series65/sketches/11_metropolis_hastings
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s65-12
+  import:         shared
+  hs-source-dirs: series65/sketches/12_gibbs_sampling
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s65-13
+  import:         shared
+  hs-source-dirs: series65/sketches/13_ehrenfest_urn
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s65-14
+  import:         shared
+  hs-source-dirs: series65/sketches/14_live_markov_music
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s65-15
+  import:         shared
+  hs-source-dirs: series65/sketches/15_webcam_markov_texture
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s66-00
+  import:         shared
+  hs-source-dirs: series66/sketches/00_state_machines
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s66-01
+  import:         shared
+  hs-source-dirs: series66/sketches/01_dfa_designer
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s66-02
+  import:         shared
+  hs-source-dirs: series66/sketches/02_nfa_subset
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s66-03
+  import:         shared
+  hs-source-dirs: series66/sketches/03_dfa_minimize
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s66-04
+  import:         shared
+  hs-source-dirs: series66/sketches/04_regex_thompson
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s66-05
+  import:         shared
+  hs-source-dirs: series66/sketches/05_product_construction
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s66-06
+  import:         shared
+  hs-source-dirs: series66/sketches/06_pumping_game
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s66-07
+  import:         shared
+  hs-source-dirs: series66/sketches/07_lexer
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s66-08
+  import:         shared
+  hs-source-dirs: series66/sketches/08_pushdown_brackets
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s66-09
+  import:         shared
+  hs-source-dirs: series66/sketches/09_cfg_cyk
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s66-10
+  import:         shared
+  hs-source-dirs: series66/sketches/10_turing_machine
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s66-11
+  import:         shared
+  hs-source-dirs: series66/sketches/11_busy_beaver
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s66-12
+  import:         shared
+  hs-source-dirs: series66/sketches/12_game_ai_fsm
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s66-13
+  import:         shared
+  hs-source-dirs: series66/sketches/13_aho_corasick
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s66-14
+  import:         shared
+  hs-source-dirs: series66/sketches/14_automaton_rhythm
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s66-15
+  import:         shared
+  hs-source-dirs: series66/sketches/15_webcam_gesture_dfa
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art

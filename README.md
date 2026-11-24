@@ -1,6 +1,6 @@
 # Haskell でつくるインタラクティブアート
 
-[p5.js 版コード集](https://github.com/r-shibusawa/p5-interactive-art)（[サイト](https://r-shibusawa.github.io/p5-interactive-art/)）の全 63 シリーズ・1008 スケッチを、Haskell と [gloss](https://hackage.haskell.org/package/gloss) に移植したコード集です。各スケッチは 1 ファイルの `Main.hs` で、フォルダ名と操作は p5.js 版と揃えています。
+[p5.js 版コード集](https://github.com/r-shibusawa/p5-interactive-art)（[サイト](https://r-shibusawa.github.io/p5-interactive-art/)）の全 66 シリーズ・1056 スケッチを、Haskell と [gloss](https://hackage.haskell.org/package/gloss) に移植したコード集です。各スケッチは 1 ファイルの `Main.hs` で、フォルダ名と操作は p5.js 版と揃えています。
 
 ## 動かし方
 
@@ -90,6 +90,9 @@ GHC 9.4.1 の実行ファイルは、新しい macOS のリンカでは起動時
 | 61 | [クラスタリング](series61/) | 距離、k-means、k の選び方、凝集型クラスタリングとデンドログラム、DBSCAN、平均値シフト、混合ガウス分布と EM、スペクトラルクラスタリング、ARI と NMI、次元の呪い、自己組織化マップ、ベクトル量子化と減色 | `cabal run s61-00` |
 | 62 | [決定木](series62/) | 20 の質問、エントロピーと情報利得、ID3、CART と領域分割、過学習、剪定と交差検証、回帰木、バギング、ランダムフォレスト、AdaBoost、勾配ブースティング、特徴量の重要度 | `cabal run s62-00` |
 | 63 | [強化学習](series63/) | 多腕バンディット、マルコフ決定過程、価値反復、方策反復、モンテカルロと TD、Q 学習、SARSA と崖歩き、探索、山登り車とタイルコーディング、Dyna-Q、REINFORCE、小さな DQN、三目並べの自己対戦、報酬の設計 | `cabal run s63-00` |
+| 64 | [アンサンブル学習](series64/) | 集合知と多様性予測定理、コンドルセの陪審定理、バイアスとバリアンス、相関と平均、ちがうモデルの投票、重み付き平均、スタッキング、専門家の混合、マージン、2 次の勾配ブースティング、多様性、Isolation Forest、不確かさ | `cabal run s64-00` |
+| 65 | [マルコフ連鎖](series65/) | 遷移行列、n ステップ後の分布、定常分布、状態の分類、ギャンブラーの破産、すごろく、グラフ上のランダムウォーク、シャッフル、n-gram、隠れマルコフモデル、連続時間、MCMC、ギブスサンプリング、エーレンフェストの壺 | `cabal run s65-00` |
+| 66 | [オートマトン](series66/) | 状態機械、DFA、NFA と部分集合構成、最小化、正規表現、言語の演算、ポンピング補題、字句解析、プッシュダウンオートマトン、CYK 構文解析、チューリング機械、忙しいビーバー、ゲーム AI、エイホ-コラシック法 | `cabal run s66-00` |
 
 ## p5.js 版との共通の違い
 
