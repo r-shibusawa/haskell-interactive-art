@@ -6354,3 +6354,291 @@ executable s66-15
   hs-source-dirs: series66/sketches/15_webcam_gesture_dfa
   main-is:        Main.hs
   build-depends:  haskell-interactive-art
+
+executable s67-00
+  import:         shared
+  hs-source-dirs: series67/sketches/00_probability_simplex
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s67-01
+  import:         shared
+  hs-source-dirs: series67/sketches/01_kl_divergence
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s67-02
+  import:         shared
+  hs-source-dirs: series67/sketches/02_fisher_information
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s67-03
+  import:         shared
+  hs-source-dirs: series67/sketches/03_gaussian_hyperbolic
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s67-04
+  import:         shared
+  hs-source-dirs: series67/sketches/04_exponential_family
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s67-05
+  import:         shared
+  hs-source-dirs: series67/sketches/05_e_m_geodesics
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s67-06
+  import:         shared
+  hs-source-dirs: series67/sketches/06_pythagorean_projection
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s67-07
+  import:         shared
+  hs-source-dirs: series67/sketches/07_bregman_divergence
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s67-08
+  import:         shared
+  hs-source-dirs: series67/sketches/08_natural_gradient
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s67-09
+  import:         shared
+  hs-source-dirs: series67/sketches/09_em_geometry
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s67-10
+  import:         shared
+  hs-source-dirs: series67/sketches/10_max_entropy
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s67-11
+  import:         shared
+  hs-source-dirs: series67/sketches/11_alpha_divergence
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s67-12
+  import:         shared
+  hs-source-dirs: series67/sketches/12_mutual_information
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s67-13
+  import:         shared
+  hs-source-dirs: series67/sketches/13_fisher_rao_sphere
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s67-14
+  import:         shared
+  hs-source-dirs: series67/sketches/14_divergence_sound
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s67-15
+  import:         shared
+  hs-source-dirs: series67/sketches/15_webcam_histogram_geometry
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s68-00
+  import:         shared
+  hs-source-dirs: series68/sketches/00_perceptron_convergence
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s68-01
+  import:         shared
+  hs-source-dirs: series68/sketches/01_activation_functions
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s68-02
+  import:         shared
+  hs-source-dirs: series68/sketches/02_cover_capacity
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s68-03
+  import:         shared
+  hs-source-dirs: series68/sketches/03_universal_approximation
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s68-04
+  import:         shared
+  hs-source-dirs: series68/sketches/04_backprop_graph
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s68-05
+  import:         shared
+  hs-source-dirs: series68/sketches/05_xor_hidden_layer
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s68-06
+  import:         shared
+  hs-source-dirs: series68/sketches/06_loss_landscape
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s68-07
+  import:         shared
+  hs-source-dirs: series68/sketches/07_depth_initialization
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s68-08
+  import:         shared
+  hs-source-dirs: series68/sketches/08_double_descent
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s68-09
+  import:         shared
+  hs-source-dirs: series68/sketches/09_regularization
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s68-10
+  import:         shared
+  hs-source-dirs: series68/sketches/10_convolution_equivariance
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s68-11
+  import:         shared
+  hs-source-dirs: series68/sketches/11_rnn_reservoir
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s68-12
+  import:         shared
+  hs-source-dirs: series68/sketches/12_hopfield_memory
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s68-13
+  import:         shared
+  hs-source-dirs: series68/sketches/13_boltzmann_machine
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s68-14
+  import:         shared
+  hs-source-dirs: series68/sketches/14_spiking_neuron_sound
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s68-15
+  import:         shared
+  hs-source-dirs: series68/sketches/15_webcam_perceptron
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s69-00
+  import:         shared
+  hs-source-dirs: series69/sketches/00_truth_tables
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s69-01
+  import:         shared
+  hs-source-dirs: series69/sketches/01_normal_forms
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s69-02
+  import:         shared
+  hs-source-dirs: series69/sketches/02_natural_deduction
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s69-03
+  import:         shared
+  hs-source-dirs: series69/sketches/03_resolution
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s69-04
+  import:         shared
+  hs-source-dirs: series69/sketches/04_quantifiers_finite_models
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s69-05
+  import:         shared
+  hs-source-dirs: series69/sketches/05_unification_prolog
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s69-06
+  import:         shared
+  hs-source-dirs: series69/sketches/06_semantic_tableaux
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s69-07
+  import:         shared
+  hs-source-dirs: series69/sketches/07_peano_induction
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s69-08
+  import:         shared
+  hs-source-dirs: series69/sketches/08_lambda_calculus
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s69-09
+  import:         shared
+  hs-source-dirs: series69/sketches/09_curry_howard
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s69-10
+  import:         shared
+  hs-source-dirs: series69/sketches/10_godel_numbering
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s69-11
+  import:         shared
+  hs-source-dirs: series69/sketches/11_diagonal_incompleteness
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s69-12
+  import:         shared
+  hs-source-dirs: series69/sketches/12_kripke_modal
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s69-13
+  import:         shared
+  hs-source-dirs: series69/sketches/13_knights_knaves
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s69-14
+  import:         shared
+  hs-source-dirs: series69/sketches/14_truth_table_sequencer
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s69-15
+  import:         shared
+  hs-source-dirs: series69/sketches/15_webcam_logic_gates
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
