@@ -6642,3 +6642,99 @@ executable s69-15
   hs-source-dirs: series69/sketches/15_webcam_logic_gates
   main-is:        Main.hs
   build-depends:  haskell-interactive-art
+
+executable s70-00
+  import:         shared
+  hs-source-dirs: series70/sketches/00_hidden_and_observed
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s70-01
+  import:         shared
+  hs-source-dirs: series70/sketches/01_forward_likelihood
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s70-02
+  import:         shared
+  hs-source-dirs: series70/sketches/02_filtering_localization
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s70-03
+  import:         shared
+  hs-source-dirs: series70/sketches/03_viterbi_trellis
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s70-04
+  import:         shared
+  hs-source-dirs: series70/sketches/04_filter_smooth_predict
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s70-05
+  import:         shared
+  hs-source-dirs: series70/sketches/05_baum_welch
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s70-06
+  import:         shared
+  hs-source-dirs: series70/sketches/06_underflow_scaling
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s70-07
+  import:         shared
+  hs-source-dirs: series70/sketches/07_how_many_states
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s70-08
+  import:         shared
+  hs-source-dirs: series70/sketches/08_gaussian_hmm
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s70-09
+  import:         shared
+  hs-source-dirs: series70/sketches/09_gesture_left_to_right
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s70-10
+  import:         shared
+  hs-source-dirs: series70/sketches/10_duration_hsmm
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s70-11
+  import:         shared
+  hs-source-dirs: series70/sketches/11_pair_hmm_alignment
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s70-12
+  import:         shared
+  hs-source-dirs: series70/sketches/12_pos_tagging
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s70-13
+  import:         shared
+  hs-source-dirs: series70/sketches/13_dna_region_finder
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s70-14
+  import:         shared
+  hs-source-dirs: series70/sketches/14_chord_melody_hmm
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
+
+executable s70-15
+  import:         shared
+  hs-source-dirs: series70/sketches/15_webcam_activity_hmm
+  main-is:        Main.hs
+  build-depends:  haskell-interactive-art
